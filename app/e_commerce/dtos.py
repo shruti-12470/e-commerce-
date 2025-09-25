@@ -8,7 +8,6 @@ class ProductSchema(BaseModel):
         name:str 
         description:str
         price:int
-        availability:int
         image:str
         in_stock:int
         cat_id:int

@@ -29,7 +29,7 @@ class Product(Base):
         name=Column(String,nullable=False,unique=True)
         description=Column(String,nullable=False)
         price=Column(Integer,nullable=False)
-        availability=Column(Integer,default=0)
+        
         image=Column(String)
         in_stock=Column(Integer,default=0)
         cat_id=Column(Integer,ForeignKey("category.id"),nullable=False)
@@ -43,7 +43,7 @@ class CartItem(Base):
         pro_id=Column(Integer,ForeignKey("product.id"),nullable=False)
         user_id=Column(Integer,ForeignKey("user.id"),nullable=False)
         pro_name=Column(String,ForeignKey("product.name"),nullable=False)
-        pro_pirce=Column(String,ForeignKey=("product.price"),nullable=False)
+        pro_pirce=Column(String,ForeignKey("product.price"),nullable=False)
 
 class Addresses(Base):
         __tablename__="addresses"

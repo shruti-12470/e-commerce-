@@ -90,7 +90,7 @@ def create_product(body:ProductSchema,user:User,db:Session):
             name=body.name,
             description=body.description,
             price=body.price,
-            availability=body.availability,
+            
             image=body.image,
             in_stock=body.in_stock,
             cat_id=body.cat_id,
